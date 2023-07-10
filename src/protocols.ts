@@ -72,3 +72,24 @@ export type TicketUser = {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type Ticket = {
+  id: number;
+  ticketId: number;
+  value: number;
+  cardIssuer: string;
+  cardLastDigits: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type payment = {
+  ticketId: number;
+  cardData: {
+    issuer: string;
+    number: number;
+    name: string;
+    expirationDate: Date;
+    cvv: number;
+  };
+};
